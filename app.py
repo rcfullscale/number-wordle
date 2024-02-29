@@ -13,7 +13,7 @@ while run == True:
     i = input(":")
     if int(i) < number and int(i) > 0:
         print("To low")
-    if int(i) > int(h) or int(i) < 0:
+    elif int(i) > int(h) or int(i) < 0:
         print ("Error number not possible")
     elif int(i) > number and int(i) < int(h):
         print ("To high")
