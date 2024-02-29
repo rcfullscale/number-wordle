@@ -16,7 +16,7 @@ while run == True:
     if int(i) > int(h) or int(i) < 0:
         print ("Error number not possible")
     elif int(i) > number and int(i) < int(h):
-    i = int(i)
+        i = int(i)
     if i < number:
         print("to low")
     elif i > number:
