@@ -20,3 +20,4 @@ while run == True:
     else:
         print("correct")
         input("click enter to exit")
+        exit()
