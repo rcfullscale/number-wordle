@@ -23,4 +23,4 @@ while run == True:
         print("correct")
         input("click enter to exit")
         exit()
-    guess = guess + 1
+    guess += 1
