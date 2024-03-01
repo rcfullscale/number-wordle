@@ -19,4 +19,4 @@ while run == True:
         print ("To high")
     else:
         print("correct")
-        exit()
+        input("click enter to exit")
