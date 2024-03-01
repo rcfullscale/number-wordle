@@ -1,12 +1,10 @@
 #imports
 import time
 import random
-import math
-import numbers
 run = True
 #runcode
-print("welcome the number wordle")
-number = random.randint(0, 99)
+print("Welcome the number wordle")
+number = random.randint(0, 100)
 while run == True:
     i = input(":")
     if int(i) < number:
@@ -15,4 +13,4 @@ while run == True:
         print("to high")
     else:
         print("correct")
-        exit()
+        run=False
