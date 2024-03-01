@@ -4,7 +4,7 @@ import random
 import math
 import numbers
 run = True
-guess = 0
+guess = 1
 #runcode
 print("welcome the number wordle")
 print("Input highest number")
