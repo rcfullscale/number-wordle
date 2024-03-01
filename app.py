@@ -4,12 +4,14 @@ import random
 import math
 import numbers
 run = True
+guess = 0
 #runcode
 print("welcome the number wordle")
 print("Input highest number")
 h = input(":")
 number = random.randint(0,int(h))
 while run == True:
+    print("start guessing, you are on guess " + str(guess))
     i = input(":")
     if int(i) < number and int(i) > 0:
         print("To low")
@@ -21,3 +23,4 @@ while run == True:
         print("correct")
         input("click enter to exit")
         exit()
+    guess = guess + 1
