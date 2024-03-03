@@ -19,7 +19,7 @@ number = random.randint(0,int(h))
 #main
 run = True
 print("Start guessing, this is your first guess")
-while run == True and guess<11:
+while run == True and guess:
     print("You are on guess " + str(guess))
     i = input(":")
     if not digits(i):
