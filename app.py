@@ -14,7 +14,7 @@ guess = 1
 #runcode
 print("Welcome to the number wordle")
 print("Input number you want the answer to be below")
-h = input(": ")
+highest_number = input(": ")
 number = random.randint(0,int(h))
 #main
 run = True
@@ -24,8 +24,8 @@ while True:
     i = input(":")
     if int(i) < number:
         print("To low")
-    elif int(i) > int(h) or int(i) < 0:
-        print ("Error number not possible")
+    elif int(i) > int(highest_number):
+        print ("Error number to high")
     elif int(i) > number:
         print ("To high")
     else:
