@@ -22,11 +22,7 @@ print("Start guessing, this is your first guess")
 while True:
     print("You are on guess " + str(guess))
     i = input(":")
-    if not digits(i):
-        print('This is a "number" game')
-    elif i=='':
-        print('You must enter a number')
-    elif int(i) < number:
+    if int(i) < number:
         print("To low")
     elif int(i) > int(h) or int(i) < 0:
         print ("Error number not possible")
