@@ -1,15 +1,6 @@
 
 import time
 import random
-# check each character if it's a number
-def digit (num):
-    return ord(num)>=48 and ord(num)<=57
-# check the whole number at once for non-number characters
-def digits(number):
-    for char in number:
-        if not digit(char):
-            return False
-    return True
 guess = 1
 #runcode
 print("Welcome to the number wordle")
