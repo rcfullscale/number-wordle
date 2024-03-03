@@ -13,6 +13,7 @@ while True:
     except ValueError:
         print("do you have a decimel or letter because they arent allowed")
 number = random.randint(0,int(highest_number))
+#number = 
 #main
 run = True
 print("Start guessing, this is your first guess")
