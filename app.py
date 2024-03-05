@@ -12,6 +12,9 @@ while True:
         break
     except ValueError:
         print("do you have a decimel or letter because they arent allowed")
+    finally: 
+        if highest_number == "":
+            print("You have to enter a number")
 number = random.randint(0,int(highest_number))
 #number = 
 #main
@@ -22,10 +25,13 @@ while True:
     while True:
         i_num = input(":")
         try:
-            i = int(i_num)
+            i = int(i_num) 
             break
         except ValueError:
-            print("do you have a decimel or letter because they arent allowed")
+            print("Do you have a decimal or letter, because they aren't allowed")
+        finally: 
+            if i_num == "":
+                print("You have to enter a number")
     if i < number:
         print("To low")
     elif i > int(highest_number):
