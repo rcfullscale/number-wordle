@@ -1,40 +1,45 @@
 
 import time
 import random
-def digit (num):
-    return ord(num)>=48 and ord(num)<=57
-def digits(number):
-    for char in number:
-        if not digit(char):
-            return False
-    return True
 guess = 1
+#runcode
 print("Welcome to the number wordle")
-print("Input number you want to be the highest option below")
-h = input(":")
-if not digits(h):
-    print ("This is a number game")
-elif h=='':
-    print("You must enter a number")
-else:
-    number = random.randint(0,int(h))
-    run = True
-    print("Start guessing, this is your first guess")
-    while run == True and guess<11:
-        print("You are on guess " + str(guess))
-        i = input(":")
-        if not digits(i):
-            print('This is a "number" game')
-        elif i=='':
-            print('You must enter a number')
-        elif int(i) < number and int(i) > 0:
-            print("To low")
-        elif int(i) > int(h) or int(i) < 0:
-            print ("Error number not possible")
-        elif int(i) > number and int(i) < int(h):
-            print ("To high")
-        else:
-            print("Correct")
-            input("Click enter to exit")
-            exit()
-        guess += 1
+while True:
+    print("Input number you want the answer to be below")
+    highest_number = input(": ")
+    try:
+        highest_numberint = int(highest_number)
+        break
+    except ValueError:
+        print("do you have a decimel or letter because they arent allowed")
+    finally: 
+        if highest_number == "":
+            print("You have to enter a number")
+number = random.randint(0,int(highest_number))
+#number = 
+#main
+run = True
+print("Start guessing, this is your first guess")
+while True:
+    print("You are on guess " + str(guess))
+    while True:
+        i_num = input(":")
+        try:
+            i = int(i_num) 
+            break
+        except ValueError:
+            print("Do you have a decimal or letter, because they aren't allowed")
+        finally: 
+            if i_num == "":
+                print("You have to enter a number")
+    if i < number:
+        print("To low")
+    elif i > int(highest_number):
+        print ("Error number to high")
+    elif i > number:
+        print ("To high")
+    else:
+        print("Correct")
+        input("Click enter to exit")
+        exit()
+    guess += 1
